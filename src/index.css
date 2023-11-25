@@ -64,6 +64,19 @@ button:focus-visible {
   max-width: 50%;
 }
 
+.project-card {
+  max-width: 400px;
+}
+
+.project-img {
+  max-width: 400px;
+}
+
+.footer-img {
+  width: 50px;
+}
+
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

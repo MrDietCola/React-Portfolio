@@ -1,17 +1,48 @@
+import ProjectCard from '../components/UI/ProjectCard'
+
+const projects = [
+  {
+    name: 'Social Task App',
+    url: 'https://peaceful-beach-14774-2857744df451.herokuapp.com/',
+    img: 'src/assets/tasks-img.png',
+    github: 'https://github.com/MrDietCola/Social-Task-App',
+  },
+  {
+    name: 'Event and Hotel Finder',
+    url: 'https://chart099.github.io/Bootcamp-Project-1/',
+    img: 'src/assets/image.png',
+    github: 'https://github.com/chart099/Bootcamp-Project-1',
+  },
+  // {
+  //   name: ,
+  //   url: ,
+  //   img: ,
+  //   github: ,
+  // },
+  // {
+  //   name: ,
+  //   url: ,
+  //   img: ,
+  //   github: ,
+  // },
+  // {
+  //   name: ,
+  //   url: ,
+  //   img: ,
+  //   github: ,
+  // },
+  // {
+  //   name: ,
+  //   url: ,
+  //   img: ,
+  //   github: ,
+  // },
+]
+
 export default function PortfolioPage() {
   return (
-    <>
-      <div className="container pt-4">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-          tenetur maiores, dolor iusto dolorum ullam, natus deleniti blanditiis
-          impedit suscipit sed magnam alias in, repellat expedita hic explicabo
-          architecto soluta. About us Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Velit voluptate exercitationem quaerat pariatur
-          mollitia, excepturi, voluptatem eveniet a dolor nobis ex veniam totam
-          nostrum temporibus ad omnis nam rerum eligendi.
-        </p>
-      </div>
-    </>
-  );
+    <div className='d-flex m-5 justify-content-around flex-wrap'>
+      <ProjectCard projects={projects}/>
+    </div>
+  )
 }
