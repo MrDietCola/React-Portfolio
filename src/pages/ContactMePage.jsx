@@ -6,7 +6,7 @@ import ListItem from '../components/UI/ListItem';
 
 import API from '../utils/API';
 
-export default function HomePage() {
+export default function ContactMePage() {
   // Prior to the return statement, our homepage uses a few react hooks and fetchData function to query to a mock database and retrieve random user data
   const [users, setUsers] = useState([]);
 

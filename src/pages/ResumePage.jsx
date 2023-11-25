@@ -6,7 +6,7 @@ import Container from '../components/UI/ListItem';
 
 import API from '../utils/API';
 
-export default function ProfilePage() {
+export default function ResumePage() {
   const [user, setUser] = useState({});
 
   // The useParams hook will yield an object. Its keys match the parameters defined on each route. Its values match the current URL value in those parameter locations
