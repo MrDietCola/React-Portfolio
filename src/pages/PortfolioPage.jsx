@@ -41,7 +41,7 @@ const projects = [
 
 export default function PortfolioPage() {
   return (
-    <div className='d-flex m-5 justify-content-around flex-wrap'>
+    <div className='d-flex m-5 justify-content-center flex-wrap'>
       <ProjectCard projects={projects}/>
     </div>
   )

@@ -1,42 +1,50 @@
 import { useState, useEffect } from 'react';
-// Bringing in the required component from 'react-router-dom' for linking between pages
-import { Link } from 'react-router-dom';
-import Profile from '../components/UI/ProfileSections/ProfileTeaser';
-import ListItem from '../components/UI/ListItem';
-
-import API from '../utils/API';
 
 export default function ContactMePage() {
   // Prior to the return statement, our homepage uses a few react hooks and fetchData function to query to a mock database and retrieve random user data
-  const [users, setUsers] = useState([]);
+  const [input, setInput] = useState({});
 
-  const fetchData = async () => {
-    const { data } = await API.getUsers();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-    setUsers(data);
+    // if (!eagerness) {
+    //   eagerness = 'low';
+    // }
+
+    
+
+    setInput('');
   };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   // Iterate over each mock user to display their abridged profile data and a link to their page
   return (
-    <div className="container pt-4">
-      <ul className="list-group list-group">
-        {users.map((user) => (
-          <ListItem key={user.id}>
-            <Profile user={user} />
-            {/* Link elements are anchors under-the-hood, but they allow the routing behavior to be controlled by the client rather than the server */}
-            <Link
-              to={`/profile/${user.id}`}
-              className="badge bg-primary rounded-pill"
-            >
-              See More
-            </Link>
-          </ListItem>
-        ))}
-      </ul>
+    <div className='form-container'>
+      <h2 className='text-center'>Contact Me</h2>
+      <form className="container d-flex flex-column" onSubmit={() => handleSubmit()}>
+        <input
+          type="text"
+          placeholder="Name"
+          name="name"
+          className="form-control input-cstm"
+        ></input>
+        <input
+          type="email"
+          placeholder="Email"
+          name="email"
+          className="form-control input-cstm"
+        ></input>
+        <textarea
+          name="message" 
+          className='form-control input-cstm'
+          placeholder="Message"
+          id="" 
+          cols="30" 
+          rows="10"
+        ></textarea>
+        <button className='btn btn-primary input-cstm'>
+          Submit
+        </button>
+      </form>
     </div>
   );
 }
