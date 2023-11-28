@@ -37,11 +37,22 @@ h1 {
 }
 
 .project-card {
-  max-width: 400px;
+  max-width: 700px;
 }
 
 .project-img {
-  max-width: 400px;
+  max-width: 700px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 4px;
+  position: relative;
+}
+
+/* .project-img:hover {
+  opacity: .7;
+} */
+
+.logo-sm {
+  width: 50px;
 }
 
 .footer-img {
@@ -62,19 +73,27 @@ h1 {
   border-color: #242424;
 }
 
-/* .portfolio-page {
-  margin: ;
-} */
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    backg
-    
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.portfolio-link {
+  position: absolute;
+  display: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
+
+.rel {
+  position: relative;
+}
+
+.rel:hover .portfolio-link {
+  display: flex;
+}
+
+.rel:hover .project-img {
+  opacity: .5;
+}
+
+
+
+
