@@ -1,5 +1,11 @@
 import ProjectCard from '../components/UI/ProjectCard'
 import socialTaskApp from '../assets/tasks-img.png'
+import enentFinder from '../assets/image.png'
+import employeeTracker from '../assets/tasks-img.png'
+import textEditor from '../assets/Screenshot25.png'
+import noteTaker from '../assets/Screenshot20.png'
+import ecommerce from '../assets/Screenshot27.png'
+
 
 const projects = [
   {
@@ -11,31 +17,31 @@ const projects = [
   {
     name: 'Event and Hotel Finder',
     url: 'https://chart099.github.io/Bootcamp-Project-1/',
-    img: 'src/assets/image.png',
+    img: enentFinder,
     github: 'https://github.com/chart099/Bootcamp-Project-1',
   },
   {
     name: 'NoSQL Employee Tracker',
     url: 'https://youtu.be/jyVmS1fM8W0',
-    img: 'src/assets/Screenshot (25).png',
+    img: employeeTracker,
     github: 'https://github.com/Seidler93/Employee-tracker',
   },
   {
     name: 'PWA Text Editor',
     url: 'https://limitless-inlet-49962-fdf6a772dad4.herokuapp.com/',
-    img: 'src/assets/Screenshot (32).png',
+    img: textEditor,
     github: 'https://github.com/Seidler93/PWA-Text-Editor',
   },
   {
     name: 'Full-Stack Note Taker',
     url: 'https://gentle-coast-49570-f78783b9d58f.herokuapp.com/notes',
-    img: 'src/assets/Screenshot (20).png',
+    img: noteTaker,
     github: 'https://github.com/Seidler93/Note-taker-2.0',
   },
   {
     name: 'MONGODB Ecommerce',
     url: 'https://www.youtube.com/watch?v=7q9dMxxWjxY&ab_channel=AJSeidler',
-    img: 'src/assets/Screenshot (27).png',
+    img: ecommerce,
     github: 'https://github.com/Seidler93/Ecommerce',
   },
 ]
