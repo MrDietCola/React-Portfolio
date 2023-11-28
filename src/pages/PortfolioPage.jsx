@@ -52,10 +52,10 @@ export default function PortfolioPage() {
   return (
     <>
       {/* Heading for the Projects section */}
-      <h2 className='text-center pt-5'>Projects</h2>
+      <h2 className='text-center project-header'>Projects</h2>
 
       {/* Container for project cards, using flex layout and centering */}
-      <div className='d-flex m-5 justify-content-center flex-wrap'>
+      <div className='d-flex justify-content-center flex-wrap py-3'>
         {/* Rendering the ProjectCard component and passing projects as a prop */}
         <ProjectCard projects={projects} />
       </div>
