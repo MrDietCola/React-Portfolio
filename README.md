@@ -1,13 +1,14 @@
 # React-Portfolio
 
 https://github.com/Seidler93/React-Portfolio
-https://limitless-inlet-49962-fdf6a772dad4.herokuapp.com/
+
+https://ajseidlerportfolio.netlify.app/
 
 ## Description
 
 This is a webpage showcasing my skills as a full stack developer. The site includes an about me section, a page displaying my portfolio of projects I've created, a page to contact me and a copy of resume with a link to download.
 
-![Alt text](<Screenshot (32).png>)
+![Alt text](<Screenshot (35).png>)
 
 - [Installation](#installation)
 - [Usage](#usage)

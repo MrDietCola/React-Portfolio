@@ -1,17 +1,24 @@
-import portrait from '../assets/port.webp'
+// Importing the portrait image from the assets folder
+import portrait from '../assets/port.webp';
 
+// React component for the About Me page
 export default function AboutMePage() {
   return (
+    // Container with padding, using flex layout
     <div className="p-4 d-flex pt-4">
-      <img src={portrait} alt="" className="abt-me-port"/>
+      {/* Displaying the portrait image */}
+      <img src={portrait} alt="Portrait" className="abt-me-port" />
+
+      {/* Paragraph containing information about me */}
       <p className="ps-4">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-        tenetur maiores, dolor iusto dolorum ullam, natus deleniti blanditiis
-        impedit suscipit sed magnam alias in, repellat expedita hic explicabo
-        architecto soluta. About us Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Velit voluptate exercitationem quaerat pariatur
-        mollitia, excepturi, voluptatem eveniet a dolor nobis ex veniam totam
-        nostrum temporibus ad omnis nam rerum eligendi.
+        {/* Professional details */}
+        Full Stack Engineer | JavaScript | React | Node | SQL <br />
+
+        {/* Brief description */}
+        Experienced coding bootcamp graduate with an extensive background in various programming languages, 
+        developing applications, and building websites from the ground up. Specializes in JavaScript and React. 
+        Professional strengths include creative problem-solving, written and verbal communication, and time management. 
+        Detail-oriented mindset from 6+ years in a management position.
       </p>
     </div>
   );

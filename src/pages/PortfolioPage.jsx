@@ -1,3 +1,4 @@
+// Importing all images
 import ProjectCard from '../components/UI/ProjectCard'
 import socialTaskApp from '../assets/tasks-img.png'
 import enentFinder from '../assets/image.png'
@@ -6,7 +7,7 @@ import textEditor from '../assets/Screenshot32.png'
 import noteTaker from '../assets/Screenshot20.png'
 import ecommerce from '../assets/Screenshot27.png'
 
-
+// Array of projects
 const projects = [
   {
     name: 'Full-Stack Social Task App',
@@ -46,13 +47,19 @@ const projects = [
   },
 ]
 
+// React component for the Portfolio Page
 export default function PortfolioPage() {
   return (
     <>
+      {/* Heading for the Projects section */}
       <h2 className='text-center pt-5'>Projects</h2>
+
+      {/* Container for project cards, using flex layout and centering */}
       <div className='d-flex m-5 justify-content-center flex-wrap'>
-        <ProjectCard projects={projects}/>
+        {/* Rendering the ProjectCard component and passing projects as a prop */}
+        <ProjectCard projects={projects} />
       </div>
     </>
-  )
+  );
 }
+

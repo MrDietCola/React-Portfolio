@@ -1,36 +1,50 @@
-import { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 export default function ContactMePage() {
-  // Prior to the return statement, our homepage uses a few react hooks and fetchData function to query to a mock database and retrieve random user data
+  // State to manage form input values
   const [input, setInput] = useState({
     name: '',
     email: '',
     message: '',
   });
 
-  const [nameErr, setNameErr] = useState(false)
-  const [emailErr, setEmailErr] = useState(false)
-  const [messageErr, setMessageErr] = useState(false)
+  // State to manage error flags for each input field
+  const [nameErr, setNameErr] = useState(false);
+  const [emailErr, setEmailErr] = useState(false);
+  const [messageErr, setMessageErr] = useState(false);
 
+  // Event handler for input changes
   const handleChange = (e) => {
+    // Update input state with the new value
     setInput({ ...input, [e.target.name]: e.target.value });
   };
 
-  const handleBlur = (e) => {
+  // Event handler for onBlur (when the input field loses focus)
+  const handleBlur = () => {
+    // Check if the 'name' field is empty and set the error flag accordingly
     if (!input.name) {
       setNameErr(true);
     }
+
+    // Check if the 'email' field is empty and set/clear the error flag accordingly
     if (!input.email) {
       setEmailErr(true);
+    } else {
+      setEmailErr(false);
     }
+
+    // Check if the 'message' field is empty and set the error flag accordingly
     if (!input.message) {
       setMessageErr(true);
     }
   };
 
+  // Event handler for form submission
   const handleSubmit = (e) => {
+    // Prevent the default form submission behavior
     e.preventDefault();
-    
+
+    // Reset the input values after submission
     setInput({
       name: '',
       email: '',
@@ -38,21 +52,24 @@ export default function ContactMePage() {
     });
   };
   
-  // Iterate over each mock user to display their abridged profile data and a link to their page
   return (
     <div className='form-container'>
       <h2 className='text-center'>Contact Me</h2>
+      {/* Form element */}
       <form className="container d-flex flex-column" onSubmit={handleSubmit}>
+        {/* Name input field */}
         <input
           type="text"
           placeholder="Name"
           name="name"
           className="form-control input-cstm"
           value={input.name}
-          // onBlur={handleBlur}
           onChange={handleChange}
         ></input>
-        {/* <p>{nameErr ? 'please fillout name' : ''}</p> */}
+        {/* Display error message if 'nameErr' is true */}
+        <p>{nameErr ? 'please fill out name' : ''}</p>
+
+        {/* Email input field */}
         <input
           type="email"
           placeholder="Email"
@@ -62,7 +79,10 @@ export default function ContactMePage() {
           onBlur={handleBlur}
           onChange={handleChange}
         ></input>
-        <p>{emailErr ? 'please fillout email' : ''}</p>
+        {/* Display error message if 'emailErr' is true */}
+        <p>{emailErr ? 'please fill out email' : ''}</p>
+
+        {/* Message textarea */}
         <textarea
           name="message" 
           className='form-control input-cstm'
@@ -71,10 +91,12 @@ export default function ContactMePage() {
           cols="30" 
           rows="10"
           value={input.message}
-          // onBlur={handleBlur}
           onChange={handleChange}
         ></textarea>
-        {/* <p>{messageErr ? 'please fillout message' : ''}</p> */}
+        {/* Display error message if 'messageErr' is true */}
+        <p>{messageErr ? 'please fill out message' : ''}</p>
+
+        {/* Submit button */}
         <button type='submit' className='btn btn-primary input-cstm'>
           Submit
         </button>
@@ -82,6 +104,3 @@ export default function ContactMePage() {
     </div>
   );
 }
-
-
-
