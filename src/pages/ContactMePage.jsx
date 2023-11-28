@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default function ContactMePage() {
+  const form = useRef()
   // State to manage form input values
   const [input, setInput] = useState({
     name: '',
@@ -39,24 +41,27 @@ export default function ContactMePage() {
     }
   };
 
-  // Event handler for form submission
-  const handleSubmit = (e) => {
-    // Prevent the default form submission behavior
+  const sendEmail = (e) => {
     e.preventDefault();
 
-    // Reset the input values after submission
-    setInput({
-      name: '',
-      email: '',
-      message: '',
-    });
+    emailjs.sendForm('service_nnr7me6', 'template_hxw61ul', form.current, '42U8YRZzzVjo5eoZF')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      setInput({
+        name: '',
+        email: '',
+        message: '',
+      });
   };
-  
+
   return (
     <div className='form-container'>
       <h2 className='text-center'>Contact Me</h2>
       {/* Form element */}
-      <form className="container d-flex flex-column" onSubmit={handleSubmit}>
+      <form ref={form} className="container d-flex flex-column" onSubmit={sendEmail}>
         {/* Name input field */}
         <input
           type="text"
