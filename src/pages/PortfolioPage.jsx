@@ -1,8 +1,8 @@
 import ProjectCard from '../components/UI/ProjectCard'
 import socialTaskApp from '../assets/tasks-img.png'
 import enentFinder from '../assets/image.png'
-import employeeTracker from '../assets/tasks-img.png'
-import textEditor from '../assets/Screenshot25.png'
+import employeeTracker from '../assets/Screenshot25.png'
+import textEditor from '../assets/Screenshot32.png'
 import noteTaker from '../assets/Screenshot20.png'
 import ecommerce from '../assets/Screenshot27.png'
 

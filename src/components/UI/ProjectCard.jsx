@@ -1,4 +1,4 @@
-import github from '../assets/github-mark.png'
+import github from '../../assets/github-mark.png'
 
 export default function ProjectCard(props) {
   return props.projects.map((project, index) => (
