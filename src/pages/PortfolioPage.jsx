@@ -1,10 +1,11 @@
 import ProjectCard from '../components/UI/ProjectCard'
+import socialTaskApp from '../assets/task-img.png'
 
 const projects = [
   {
     name: 'Full-Stack Social Task App',
     url: 'https://peaceful-beach-14774-2857744df451.herokuapp.com/',
-    img: 'src/assets/tasks-img.png',
+    img: socialTaskApp,
     github: 'https://github.com/MrDietCola/Social-Task-App',
   },
   {
