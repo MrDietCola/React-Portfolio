@@ -12,6 +12,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  padding-top: 4rem;
 }
 
 body {
@@ -94,8 +96,13 @@ h1 {
   opacity: .5;
 }
 
+.projects {
+  padding-top: 3rem;
+}
+
 .about-me {
   display: flex;
+  padding-top: 3rem;
 }
 
 .project-container{
@@ -108,6 +115,75 @@ h1 {
 
 .about-me-p {
   padding-left: 25px;
+}
+
+.navbar {
+  background-color: black;
+  padding: 0;
+}
+
+.logo {
+  height: 75px;
+  width: 60px;
+  object-fit: cover;
+}
+
+.mw {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.header-icon {
+  font-size: 38px;
+  text-decoration: none;
+  color: white;
+  transition: 0.25s ease;
+}
+
+.header-icon:hover {
+  color: grey;
+}
+
+.text-light {
+  transition: 0.25s ease!important;
+}
+
+.text-light:hover {
+  color: grey!important;
+}
+
+.sliding-a {
+  display: inline-block;
+  font-size: 30px;
+  opacity: 0;
+  transform: translateX(-100%); /* Initial position outside the container */
+  transform: translateY(-100%); /* Initial position outside the container */
+  animation: slideInA 1s forwards; /* Adjust the duration as needed */
+}
+
+.sliding-s {
+  display: inline-block;
+  font-size: 30px;
+  opacity: 0;
+  transform: translateX(100%);
+  transform: translateY(30%); /* Initial position outside the container */
+  animation: slideInB 1s forwards; /* Adjust the duration as needed */
+}
+
+@keyframes slideInA {
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Final position at 0% */
+    transform: translateY(-20%); /* Final position at 0% */
+  }
+}
+
+@keyframes slideInB {
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Final position at 0% */
+    transform: translateY(30%); /* Final position at 0% */
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -140,6 +216,17 @@ h1 {
 
   .about-me-p {
     padding-left: 0;
+  }
+}
+
+
+@media screen and (max-width: 550px) {
+  #socials {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: center!important;
   }
 }
 

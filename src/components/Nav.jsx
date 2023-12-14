@@ -7,16 +7,16 @@ export default function Nav() {
   return (
     <Navbar
       links={[
-        <Link key={1} className="nav-link text-light px-2 py-3" to="/">
+        <Link key={1} className="nav-link text-light px-2 py-3 links" to="/">
           About Me
         </Link>,
-        <Link key={2} className="nav-link text-light px-2 py-3" to="/portfolio">
+        <Link key={2} className="nav-link text-light px-2 py-3 links" to="/portfolio">
           Portfolio
         </Link>,
-        <Link key={3} className="nav-link text-light px-2 py-3" to="/contact">
+        <Link key={3} className="nav-link text-light px-2 py-3 links" to="/contact">
           Contact Me
         </Link>,
-        <Link key={4} className="nav-link text-light px-2 py-3" to="/resume">
+        <Link key={4} className="nav-link text-light px-2 py-3 links" to="/resume">
           Resume
         </Link>,
       ]}

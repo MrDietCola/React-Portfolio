@@ -50,7 +50,7 @@ const projects = [
 // React component for the Portfolio Page
 export default function PortfolioPage() {
   return (
-    <>
+    <div className='projects'>
       {/* Heading for the Projects section */}
       <h2 className='text-center project-header'>Projects</h2>
 
@@ -59,7 +59,7 @@ export default function PortfolioPage() {
         {/* Rendering the ProjectCard component and passing projects as a prop */}
         <ProjectCard projects={projects} />
       </div>
-    </>
+    </div>
   );
 }
 

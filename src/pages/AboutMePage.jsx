@@ -5,7 +5,7 @@ import portrait from '../assets/port.webp';
 export default function AboutMePage() {
   return (
     // Container with padding, using flex layout
-    <div className="p-4 about-me pt-4">
+    <div className="px-4 about-me">
       {/* Displaying the portrait image */}
       <img src={portrait} alt="Portrait" className="abt-me-port" />
 
