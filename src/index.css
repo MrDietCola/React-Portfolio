@@ -142,9 +142,15 @@ h1 {
   margin: 0!important;
 }
 
+.width100 {
+ width: 100%;
+ display: flex;
+ justify-content: center;
+}
+
 .skill-logo {
   font-size: 2rem;
-
+  max-width: 50%;
 }
 
 .skill-card {
@@ -162,8 +168,10 @@ h1 {
   width: 100%;
   padding: 2rem 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 10px;
 }
 
 .logo {
@@ -215,6 +223,8 @@ h1 {
   animation: slideInB 1s forwards; /* Adjust the duration as needed */
 }
 
+
+
 @keyframes slideInA {
   to {
     opacity: 1;
@@ -248,10 +258,14 @@ h1 {
   background-color: black;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .abt-me-port {
     max-width: 100%;
     margin-bottom: 15px;
+  }
+
+  .logo-large-container {
+    display: none!important;
   }
   
   .about-me {
@@ -278,6 +292,32 @@ h1 {
 
   .about-me-p {
     padding-left: 0;
+    font-size: 1rem;
+  }
+
+  .skill-name {
+    font-size: 1rem;
+  }
+
+  /* .avoid-header {
+    position: relative;
+  }
+
+  .about-content {
+    position: absolute;
+    bottom: 0;
+    background-color: #242424c4;
+    color: white;
+  } */
+  
+  .abt-me-port {
+    max-height: 50%!important;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .mw {
+    height: fit-content;
   }
 }
 
@@ -292,4 +332,27 @@ h1 {
   }
 }
 
+@media screen and (max-width: 450px) {
+  .navbar {
+    font-size: .8rem;
+  }
+  
+  .logo {
+    max-height: 4rem;
+  }
+
+  .avoid-header {
+    padding-top: 1rem;
+  }
+}
+
+
+@media screen and (max-width: 390px) {  
+  .logo {
+    display: none;
+  }
+  :root {
+    padding-top: 2rem;
+  }
+}
 

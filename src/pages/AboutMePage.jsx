@@ -30,9 +30,9 @@ export default function AboutMePage() {
   };
   return (
     <>
-      <div className='bg-black avoid-header d-flex align-items-center justify-content-between'>
+      <div className='bg-black avoid-header width100'>
         {/* hero */}
-        <div className=' px-4 d-flex align-items-center justify-content-between bg-black mw container'>
+        <div className=' px-4 d-flex justify-content-between bg-black mw width100'>
           {/* Displaying the portrait image */}
           <img src={portrait} alt="Portrait" className="abt-me-port" />
           {/* animated logo */}
@@ -52,8 +52,8 @@ export default function AboutMePage() {
         </div>
       </div>
       {/* about me */}
-      <div className='container'>
-        <div className="px-4 about-me container mw">
+      <div className='width100 about-content about-content'>
+        <div className="px-4 about-me width100 mw">
           <h2>ABOUT ME</h2>
           {/* Paragraph containing information about me */}
           <p className='about-me-p ps-4'>
