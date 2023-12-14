@@ -26,8 +26,7 @@ export default function Nav({ links }) {
         {/* logo with animation */}
         <Link>
           <video
-            className='logo' 
-             
+            className='logo'              
             autoPlay 
             controls={false} 
             muted
@@ -51,7 +50,8 @@ export default function Nav({ links }) {
            className="header-icon pe-2" 
           >
            <a className='header-icon' target="_blank" href="https://github.com/Seidler93"><FontAwesomeIcon icon={faGithub}/></a>
-          </motion.button><motion.button
+          </motion.button>
+          <motion.button
            whileHover={{ scale: 1.1, rotate: 360}}
            whileTap={{ scale: 0.9,  }}
            transition={{

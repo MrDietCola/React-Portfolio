@@ -16,6 +16,12 @@
   padding-top: 4rem;
 }
 
+.avoid-header {
+  padding-top: 2rem;
+}
+
+
+
 body {
   margin: 0;
   min-width: 320px;
@@ -102,8 +108,16 @@ h1 {
 
 .about-me {
   display: flex;
-  padding-top: 3rem;
+  padding-top: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
+
+/* .my-skills {
+  width: 50%;
+} */
 
 .project-container{
   padding: 0 15px 30px 15px;
@@ -114,12 +128,42 @@ h1 {
 }
 
 .about-me-p {
-  padding-left: 25px;
+  line-height: 180%;
+  font-size: 1.3rem;
 }
 
 .navbar {
   background-color: black;
   padding: 0;
+} 
+
+.skill-name {
+  font-size: 1.3rem;
+  margin: 0!important;
+}
+
+.skill-logo {
+  font-size: 2rem;
+
+}
+
+.skill-card {
+  display: flex;
+  width: fit-content;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: black;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.skills-container {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -185,6 +229,23 @@ h1 {
     transform: translateX(0); /* Final position at 0% */
     transform: translateY(30%); /* Final position at 0% */
   }
+}
+
+.logo-rel {
+  position: relative;
+}
+.logo-char {
+  font-size: 120px;
+  font-weight: 900;
+  position: absolute;;
+}
+
+.logo-large-container {
+  width: 50%;
+}
+
+.bg-black {
+  background-color: black;
 }
 
 @media screen and (max-width: 800px) {
