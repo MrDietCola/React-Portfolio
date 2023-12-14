@@ -40,8 +40,29 @@ export default function Nav({ links }) {
           {links.map((link) => link)}
         </div>
         <div id='socials'>        
-          <a className="header-icon pe-2" href="https://github.com/Seidler93" target="_blank"><FontAwesomeIcon icon={faGithub} /></a>
-          <a className="header-icon ps-1" href="https://www.linkedin.com/in/a-j-seidler-a50556b2/" target="_blank"><FontAwesomeIcon icon={faLinkedin} /></a>
+          <motion.button
+           whileHover={{ scale: 1.1, rotate: 360}}
+           whileTap={{ scale: 0.9,  }}
+           transition={{
+            type: "spring",
+            stiffness: 260,
+            damping: 20
+          }}
+           className="header-icon pe-2" 
+          >
+           <a className='header-icon' target="_blank" href="https://github.com/Seidler93"><FontAwesomeIcon icon={faGithub}/></a>
+          </motion.button><motion.button
+           whileHover={{ scale: 1.1, rotate: 360}}
+           whileTap={{ scale: 0.9,  }}
+           transition={{
+            type: "spring",
+            stiffness: 260,
+            damping: 20
+          }}
+           className="header-icon pe-2" 
+          >
+           <a className='header-icon' target="_blank" href="https://www.linkedin.com/in/a-j-seidler-a50556b2/"><FontAwesomeIcon icon={faLinkedin}/></a>
+          </motion.button>
         </div>
       </div>
     </nav>

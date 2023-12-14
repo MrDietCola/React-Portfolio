@@ -15,10 +15,7 @@ export default function AboutMePage() {
         Full Stack Engineer | JavaScript | React | Node | SQL <br />
 
         {/* Brief description */}
-        Experienced coding bootcamp graduate with an extensive background in various programming languages, 
-        developing applications, and building websites from the ground up. Specializes in JavaScript and React. 
-        Professional strengths include creative problem-solving, written and verbal communication, and time management. 
-        Detail-oriented mindset from 6+ years in a management position.
+        Experienced coding bootcamp graduate with an extensive background in various programming languages, developing applications, and building websites from the ground up. Specializes in JavaScript and React. With over 6 years in a management position, my professional strengths include a detail-oriented mindset, a creative approach to problem-solving, excellent communication skills, and being a proficient multitasker who works well under pressure and within timelines.
       </p>
     </div>
   );

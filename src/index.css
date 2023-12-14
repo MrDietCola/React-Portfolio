@@ -137,7 +137,8 @@ h1 {
   font-size: 38px;
   text-decoration: none;
   color: white;
-  transition: 0.25s ease;
+  background-color: transparent;
+  border: none;
 }
 
 .header-icon:hover {
