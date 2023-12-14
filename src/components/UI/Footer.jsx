@@ -7,7 +7,6 @@ export default function Footer() {
     <footer className="bg-secondary p-5 d-flex justify-content-center footer-section">
       <a className="p-2" href="https://github.com/Seidler93" target="_blank"><img className="footer-img" src={github} alt="" /></a>
       <a className="p-2" href="https://www.linkedin.com/in/a-j-seidler-a50556b2/" target="_blank"><img className="footer-img" src={linkedin} alt="" /></a>
-      <a className="p-2" href=""><img className="footer-img" src={linkedin} alt="" /></a>
     </footer>
   );
 }
