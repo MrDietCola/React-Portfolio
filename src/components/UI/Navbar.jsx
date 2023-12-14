@@ -32,6 +32,7 @@ export default function Nav({ links }) {
             controls={false} 
             muted
             ref={videoRef}
+            playsinline 
             onMouseOver={play}
           />
         </Link>
