@@ -27,14 +27,14 @@ export default function Nav({ links }) {
         <Link>
           <video
             className='logo' 
-            src={logoMp4} 
+             
             autoPlay 
             controls={false} 
             muted
             ref={videoRef}
-            playsinline 
+            playsInline 
             onMouseOver={play}
-          />
+          ><source src={logoMp4} type="video/mp4" /></video>
         </Link>
         <div className="d-flex justify-content-start px-3" id="">
           {links.map((link) => link)}
