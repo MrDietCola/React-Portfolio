@@ -16,9 +16,9 @@
   padding-top: 4rem;
 }
 
-.avoid-header {
+/* .avoid-header {
   padding-top: 2rem;
-}
+} */
 
 
 
@@ -42,6 +42,7 @@ h1 {
 
 .abt-me-port {
   max-width: 50%;
+  object-fit: contain;
 }
 
 .project-card {
@@ -53,6 +54,20 @@ h1 {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   border-radius: 4px;
   position: relative;
+}
+
+.background-div {
+  /* Set the background image property with the path to your image */
+  background-image: url('path/to/your/image.jpg');
+  
+  /* Set the size and position of the background image */
+  background-size: cover; /* or contain, depending on your preference */
+  background-position: center; /* or any other position */
+  
+  /* Add other styles as needed */
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
 }
 
 /* .project-img:hover {
@@ -174,6 +189,10 @@ h1 {
   column-gap: 10px;
 }
 
+.hero {
+  height: 100vh;
+}
+
 .logo {
   height: 75px;
   width: 60px;
@@ -259,6 +278,9 @@ h1 {
 }
 
 @media screen and (max-width: 1000px) {
+  .hero {
+    height: fit-content;
+  }
   .abt-me-port {
     max-width: 100%;
     margin-bottom: 15px;
@@ -287,7 +309,7 @@ h1 {
 
   nav li {
     display: inline-block;
-            margin-right: 10px; 
+    margin-right: 10px; 
   }
 
   .about-me-p {

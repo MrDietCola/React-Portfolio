@@ -1,13 +1,13 @@
 // Importing the portrait image from the assets folder
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import portrait from '../assets/port.webp';
-import { motion } from "framer-motion"
+import { motion, useAnimation, useInView } from "framer-motion"
 import logoMp4 from '../assets/logoanimation.mp4';
 import SkillCard from '../components/UI/SkillCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin, faJs, faReact, faNodeJs, } from "@fortawesome/free-brands-svg-icons"
 import { faDatabase } from "@fortawesome/free-solid-svg-icons"
-
+import { useLayoutEffect } from 'react';
 
 // React component for the About Me page
 export default function AboutMePage() {
@@ -28,9 +28,27 @@ export default function AboutMePage() {
     //   videoRef.current.play();
     // }
   };
+
+  const controls = useAnimation();
+  // const [ref, inView] = useInView({
+  //   triggerOnce: true, // Trigger the animation once
+  // });
+
+  
+  const viewref = useRef(null)
+  const isInView = useInView(viewref)
+  
+  useEffect(() => {
+    if (isInView) {
+      controls.start({ scale: 1 });
+    } else {
+      controls.start({ scale: .8 });
+    }
+  }, [isInView]);
+  
   return (
     <>
-      <div className='bg-black avoid-header width100'>
+      <div className='bg-black avoid-header width100 hero'>
         {/* hero */}
         <div className=' px-4 d-flex justify-content-between bg-black mw width100'>
           {/* Displaying the portrait image */}
@@ -52,20 +70,26 @@ export default function AboutMePage() {
         </div>
       </div>
       {/* about me */}
-      <div className='width100 about-content about-content'>
-        <div className="px-4 about-me width100 mw">
-          <h2>ABOUT ME</h2>
-          {/* Paragraph containing information about me */}
-          <p className='about-me-p ps-4'>
-            {/* Brief description */}
-            Experienced coding bootcamp graduate with an extensive background in various programming languages, developing applications, and building websites from the ground up. Specializes in JavaScript and React. With over 6 years in a management position, my professional strengths include a detail-oriented mindset, a creative approach to problem-solving, excellent communication skills, and being a proficient multitasker who works well under pressure and within timelines.
-          </p>
-          <div className='skills-container'>            
-            {/* Professional details */}
-            {skills.map((skill, index)=> <SkillCard skill={skill} index={index}/>)}           
-          </div>
+      <motion.div
+      ref={viewref}
+      initial={{ scale: .8 }}
+      animate={controls}
+      transition={{ duration: 0.5 }}
+      className='width100 about-content about-content py-4'
+    >
+      <div className="px-4 about-me width100 mw">
+        <h2>ABOUT ME</h2>
+        {/* Paragraph containing information about me */}
+        <p className='about-me-p ps-4'>
+          {/* Brief description */}
+          Experienced coding bootcamp graduate with an extensive background in various programming languages, developing applications, and building websites from the ground up. Specializes in JavaScript and React. With over 6 years in a management position, my professional strengths include a detail-oriented mindset, a creative approach to problem-solving, excellent communication skills, and being a proficient multitasker who works well under pressure and within timelines.
+        </p>
+        <div className='skills-container'>            
+          {/* Professional details */}
+          {skills.map((skill, index)=> <SkillCard skill={skill} index={index}/>)}           
         </div>
       </div>
+    </motion.div>
     </>
   );
 }
