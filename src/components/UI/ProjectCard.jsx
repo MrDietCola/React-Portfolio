@@ -22,7 +22,14 @@ export default function ProjectCard({project}) {
       }
     };
 
-    controls.start(isInFocus ? { scale: 1 } : { scale: .5 });
+    const initialCheck = () => {
+      handleScroll();
+      controls.start(isInFocus ? { scale: 1 } : { scale: .5 });
+    };
+
+    // Initial check when the component mounts
+    initialCheck();
+
 
     // Attach the event listener to the scroll event
     window.addEventListener('scroll', handleScroll);
