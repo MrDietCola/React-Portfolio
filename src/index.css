@@ -46,14 +46,35 @@ h1 {
 }
 
 .project-card {
-  max-width: 500px;
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px;
+  border-bottom: 2px solid black;
+  padding-bottom: 40px;
+}
+
+.w500 {
+  max-width: 650px;
+}
+
+.w100 {
+  width: 100%;
 }
 
 .project-img {
-  max-width: 500px;
+  width: 100%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   border-radius: 4px;
   position: relative;
+}
+
+.project-img-container {
+  width: 50%;
+}
+
+.project-text {
+  max-width: 650px;
+  width: 50%;
 }
 
 .background-div {
@@ -278,11 +299,23 @@ h1 {
 }
 
 @media screen and (max-width: 1000px) {
+  .project-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-text,
+  .project-img-container {
+    width: 70%;
+  }
+
   .hero {
     height: fit-content;
   }
+
   .abt-me-port {
     max-width: 100%;
+    padding: 30px 20% 40px;
     margin-bottom: 15px;
   }
 
@@ -343,6 +376,16 @@ h1 {
   }
 }
 
+@media screen and (max-width: 650px) {
+  .project-text,
+  .project-img-container {
+    width: 85%;
+  }
+
+  .projects {
+    padding-top: 2rem;
+  }
+}
 
 @media screen and (max-width: 550px) {
   #socials {
@@ -351,6 +394,19 @@ h1 {
 
   .navbar {
     justify-content: center!important;
+  }
+
+  .project-text,
+  .project-img-container {
+    width: 95%;
+  }
+
+  .projects {
+    padding-top: 1rem;
+  }
+
+  .abt-me-port {
+    padding: 30px 10% 40px;
   }
 }
 

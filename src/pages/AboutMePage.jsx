@@ -1,6 +1,6 @@
 // Importing the portrait image from the assets folder
 import { useState, useRef, useEffect } from 'react';
-import portrait from '../assets/port.webp';
+import portrait from '../assets/portvid.mp4';
 import { motion, useAnimation, useInView } from "framer-motion"
 import logoMp4 from '../assets/logoanimation.mp4';
 import SkillCard from '../components/UI/SkillCard';
@@ -12,11 +12,15 @@ import { useLayoutEffect } from 'react';
 // React component for the About Me page
 export default function AboutMePage() {
   const skills = [
-    {name: 'Git', logo: faGithub},
-    {name: 'JS', logo: faJs},
-    {name: 'React', logo: faReact},
-    {name: 'Node.js', logo: faNodeJs},
-    {name: 'SQL', logo: faDatabase},
+    {name: 'Git', logo: 'github'},
+    {name: 'JS', logo: 'js'},
+    {name: 'React', logo: 'react'},
+    {name: 'Node.js', logo: 'nodeJS'},
+    {name: 'SQL', logo: 'sql'},
+    {name: 'MongoDB', logo: 'mongoDB'},
+    {name: 'Express', logo: 'express'},
+    {name: 'RESTful APIs', logo: 'rest'},
+    {name: 'GraphQL', logo: 'graphQL'},
   ]
   const videoRef = useRef(null);
   const play = () => {
@@ -52,7 +56,18 @@ export default function AboutMePage() {
         {/* hero */}
         <div className=' px-4 d-flex justify-content-between bg-black mw width100'>
           {/* Displaying the portrait image */}
-          <img src={portrait} alt="Portrait" className="abt-me-port" />
+          {/* <img src={portrait} alt="Portrait" className="abt-me-port" /> */}
+          <video
+              className='abt-me-port'             
+              autoPlay 
+              controls={false} 
+              muted
+              loop={true}
+              playsInline 
+              onMouseOver={play}
+              >
+                <source src={portrait} type="video/mp4" />
+            </video>
           {/* animated logo */}
           <div className='d-flex justify-content-center align-items-center logo-large-container'>
             <video
@@ -84,7 +99,7 @@ export default function AboutMePage() {
           {/* Brief description */}
           Experienced coding bootcamp graduate with an extensive background in various programming languages, developing applications, and building websites from the ground up. Specializes in JavaScript and React. With over 6 years in a management position, my professional strengths include a detail-oriented mindset, a creative approach to problem-solving, excellent communication skills, and being a proficient multitasker who works well under pressure and within timelines.
         </p>
-        <div className='skills-container'>            
+        <div className='skills-container justify-content-start'>            
           {/* Professional details */}
           {skills.map((skill, index)=> <SkillCard skill={skill} index={index}/>)}           
         </div>
