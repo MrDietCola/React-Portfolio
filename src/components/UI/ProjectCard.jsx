@@ -3,6 +3,7 @@ import SkillCard from '../UI/SkillCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin, faJs, faReact, faNodeJs, } from "@fortawesome/free-brands-svg-icons"
 import { faDatabase } from "@fortawesome/free-solid-svg-icons"
+import { Icon } from '@iconify/react';
 
 import { useRef, useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
@@ -67,13 +68,13 @@ export default function ProjectCard({project}) {
       transition={{ duration: 0.3 }}
       
     >
-      <a href={project.url} target="_blank" className="rel project-img-container">
-        <img src={project.img} alt="" className="project-img "/>
-        <div className="100w 100h justify-content-center align-items-center portfolio-link my-3">
-          <a className="p-2" href={project.url} target="_blank">{project.name}</a>
-          <a className="p-2" href={project.github} target="_blank"><img className="logo-sm" src={github} alt="" /></a>
+      <div className="rel project-img-container">
+        <img src={project.img} alt="" className="project-img rel"/>
+        <div className="d-flex justify-content-center mt-4">
+          <a className="proj-btn me-2" href={project.url} target="_blank">Visit Site</a>
+          <a className="proj-btn ms-2" href={project.github} target="_blank"><FontAwesomeIcon icon={faGithub} className='logo-large me-3' />View Code</a>
         </div>
-      </a>
+      </div>
       <div className='project-text '>
         <h2>{project.name}</h2>
         <h5>{project.about}</h5>

@@ -51,6 +51,8 @@ h1 {
   gap: 20px;
   border-bottom: 2px solid black;
   padding-bottom: 40px;
+  flex: 0 0 auto; 
+
 }
 
 .w500 {
@@ -70,6 +72,8 @@ h1 {
 
 .project-img-container {
   width: 50%;
+  overflow: hidden;
+  flex: 0 0 auto; 
 }
 
 .project-text {
@@ -119,24 +123,48 @@ h1 {
 
 .portfolio-link {
   position: absolute;
-  display: none;
+  display: flex;
+  /* display: none; */
+  opacity: 0;
   top: 0;
   bottom: 0;
-  left: 0;
-  right: 0;
+  /* left: 0; */
+  /* right: 0; */
+  transition: opacity 0.3s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.proj-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+
+.logo-large {
+  font-size: 40px;
 }
 
 .rel {
   position: relative;
 }
 
-.rel:hover .portfolio-link {
+/* .rel:hover .portfolio-link {
   display: flex;
-}
+  opacity: 1;
+} */
 
-.rel:hover .project-img {
+/* .rel:hover .project-img {
   opacity: .5;
-}
+
+} */
 
 .projects {
   padding-top: 3rem;
