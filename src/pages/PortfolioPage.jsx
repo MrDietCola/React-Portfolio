@@ -7,6 +7,7 @@ import textEditor from '../assets/Screenshot32.png'
 import noteTaker from '../assets/Screenshot20.png'
 import ecommerce from '../assets/omnicartScreenshot.png'
 import sweatcheck from '../assets/sweatcheck2.png'
+import memory from '../assets/Screenshot41.png'
 import { faGithub, faLinkedin, faJs, faReact, faNodeJs, } from "@fortawesome/free-brands-svg-icons"
 import { faDatabase } from "@fortawesome/free-solid-svg-icons"
 import { Icon } from '@iconify/react';
@@ -43,6 +44,18 @@ const projects = [
       {name: 'Express', logo: 'express'},
       {name: 'RESTful APIs', logo: 'rest'},
       {name: 'SQL', logo: 'sql'},
+    ]
+  },
+  {
+    name: 'Memory Game',
+    about: 'Simple Memory game using react and firebase',
+    url: 'https://memorygame-97bd3.web.app/',
+    img: memory,
+    github: 'https://github.com/Seidler93/Memory-Game-PWA',
+    description: 'Introducing a fun and engaging Memory Match Game built with React and styled with CSS. This classic game is perfect for users of all ages to challenge their memory skills while enjoying a visually appealing interface.',
+    skills: [
+      {name: 'JS', logo: 'js'},
+      {name: 'React', logo: 'react'},
     ]
   },
   {
