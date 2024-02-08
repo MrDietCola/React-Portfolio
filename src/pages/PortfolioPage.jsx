@@ -30,22 +30,6 @@ const projects = [
     ]
   },
   {
-    name: 'Omnicart',
-    about: 'Full-Stack Ecommerce website for buying clothes',
-    url: 'https://safe-cove-66702-0245eab30949.herokuapp.com/',
-    img: ecommerce,
-    github: 'https://github.com/Seidler93/React-Ecommerce',
-    description: 'This application is designed to represent seamless navigation through an e-commerce website. Users can easily explore the platform using intuitive features to add  items to their cart and view shopping history. With a focus on user-friendly interactions, the application showcases fundamental functionalities commonly found with an online store.',
-    skills: [
-      {name: 'JS', logo: 'js'},
-      {name: 'React', logo: 'react'},
-      {name: 'Node.js', logo: 'nodeJS'},
-      {name: 'MongoDB', logo: 'mongoDB'},
-      {name: 'Express', logo: 'express'},
-      {name: 'GraphQL', logo: 'graphQL'},
-    ]
-  },
-  {
     name: 'Get Sh*t Done',
     about: 'Full-Stack social task app',
     url: 'https://peaceful-beach-14774-2857744df451.herokuapp.com/',
@@ -59,6 +43,22 @@ const projects = [
       {name: 'Express', logo: 'express'},
       {name: 'RESTful APIs', logo: 'rest'},
       {name: 'SQL', logo: 'sql'},
+    ]
+  },
+  {
+    name: 'Omnicart',
+    about: 'Full-Stack Ecommerce website for buying clothes',
+    url: 'https://safe-cove-66702-0245eab30949.herokuapp.com/',
+    img: ecommerce,
+    github: 'https://github.com/Seidler93/React-Ecommerce',
+    description: 'This application is designed to represent seamless navigation through an e-commerce website. Users can easily explore the platform using intuitive features to add  items to their cart and view shopping history. With a focus on user-friendly interactions, the application showcases fundamental functionalities commonly found with an online store.',
+    skills: [
+      {name: 'JS', logo: 'js'},
+      {name: 'React', logo: 'react'},
+      {name: 'Node.js', logo: 'nodeJS'},
+      {name: 'MongoDB', logo: 'mongoDB'},
+      {name: 'Express', logo: 'express'},
+      {name: 'GraphQL', logo: 'graphQL'},
     ]
   },
   {
