@@ -8,6 +8,7 @@ import noteTaker from '../assets/Screenshot20.png'
 import ecommerce from '../assets/omnicartScreenshot.png'
 import sweatcheck from '../assets/sweatcheck2.png'
 import memory from '../assets/Screenshot41.png'
+import timer from '../assets/timer.png'
 import { faGithub, faLinkedin, faJs, faReact, faNodeJs, } from "@fortawesome/free-brands-svg-icons"
 import { faDatabase } from "@fortawesome/free-solid-svg-icons"
 import { Icon } from '@iconify/react';
@@ -44,6 +45,19 @@ const projects = [
       {name: 'Express', logo: 'express'},
       {name: 'RESTful APIs', logo: 'rest'},
       {name: 'SQL', logo: 'sql'},
+    ]
+  },
+  {
+    name: 'Workout Timer',
+    about: 'This is a full stack interbal timer app using react and firebase.',
+    url: 'https://gym-timer-c2482.web.app/',
+    img: timer,
+    github: 'https://github.com/Seidler93/Workout-Timer-App',
+    description: 'The Gym Interval Timer is your ultimate workout companion, designed to enhance your fitness routine with customizable timers tailored to your training needs. With a sleek and user-friendly interface, this app empowers you to create and manage personalized interval timers effortlessly. Whether youare into high-intensity interval training (HIIT), circuit training, or any other workout regimen, our app ensures you stay motivated and on track to achieve your fitness goals.',
+    skills: [
+      {name: 'JS', logo: 'js'},
+      {name: 'React', logo: 'react'},
+      {name: 'Firebase', logo: 'firebase'},
     ]
   },
   {

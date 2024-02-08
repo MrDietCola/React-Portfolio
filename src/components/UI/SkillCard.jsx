@@ -7,6 +7,8 @@ const logoComponents = {
   mongoDB: <Icon icon='simple-icons:mongodb' width="30" height="30"/>,
   express: <Icon icon='skill-icons:expressjs-light' width="30" height="30" className='me-1' />,
   graphQL: <Icon icon='simple-icons:graphql' width="30" height="30" className='me-1' />,
+  firebase: <Icon icon="teenyicons:firebase-solid" width="30" height="30" className='me-1'/>,
+  bootstrap: <Icon icon="akar-icons:bootstrap-fill" width="30" height="30" className='me-1'/>,
   github: <FontAwesomeIcon icon={faGithub} className='px-1 pe-2 skill-logo' />,
   linkedin: <FontAwesomeIcon icon={faLinkedin} className='px-1 pe-2 skill-logo' />,
   js: <FontAwesomeIcon icon={faJs} className='px-1 pe-2 skill-logo' />,

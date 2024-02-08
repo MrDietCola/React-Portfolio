@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin, faJs, faReact, faNodeJs, } from "@fortawesome/free-brands-svg-icons"
 import { faDatabase } from "@fortawesome/free-solid-svg-icons"
 import { useLayoutEffect } from 'react';
+import Carousel from '../components/UI/SkillCarousel';
 
 // React component for the About Me page
 export default function AboutMePage() {
@@ -21,6 +22,8 @@ export default function AboutMePage() {
     {name: 'Express', logo: 'express'},
     {name: 'RESTful APIs', logo: 'rest'},
     {name: 'GraphQL', logo: 'graphQL'},
+    {name: 'Firebase', logo: 'firebase'},
+    {name: 'Bootstrap', logo: 'bootstrap'},
   ]
   const videoRef = useRef(null);
   const play = () => {
@@ -52,7 +55,7 @@ export default function AboutMePage() {
   
   return (
     <>
-      <div className='bg-black avoid-header width100 hero'>
+      <div className='bg-black avoid-header width100 hero d-flex flex-column align-items-center'>
         {/* hero */}
         <div className=' px-4 d-flex justify-content-between bg-black mw width100'>
           {/* Displaying the portrait image */}
@@ -83,6 +86,7 @@ export default function AboutMePage() {
             </video>
           </div>
         </div>
+        {/* <Carousel skills={skills}/> */}
       </div>
       {/* about me */}
       <motion.div
